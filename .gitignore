@@ -22,6 +22,8 @@ public/sitemap.xml
 /build
 *.xml
 
+/.idea/
+
 # rss feed
 /public/feed.xml
 
