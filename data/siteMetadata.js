@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'Фінансовий  Блог',
-  author: 'Віктор Павлік',
+  author: 'Дмитро Павлюк',
   headerTitle: 'Фінансовий Блог',
   description: 'Блог про інвестиції та фінансову грамотність',
   language: 'uk-UA',
