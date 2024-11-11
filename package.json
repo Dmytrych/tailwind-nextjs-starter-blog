@@ -71,7 +71,6 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@3.6.1",
   "resolutions": {
     "@types/react": "npm:types-react@19.0.0-rc.1"
   }
