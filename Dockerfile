@@ -11,6 +11,8 @@ COPY . .
 ENV EXPORT=1
 ENV UNOPTIMIZED=1
 
+RUN echo "$(ls)"
+
 RUN yarn build
 
 RUN yarn global add serve
