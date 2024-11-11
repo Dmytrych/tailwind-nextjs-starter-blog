@@ -2,7 +2,7 @@ FROM node:20-alpine
 
 WORKDIR /usr/src/app
 
-RUN npm install -g yarn@3.6.1
+RUN npm install -g yarn@3.6.0
 COPY package.json .
 COPY yarn.lock .
 RUN yarn install
