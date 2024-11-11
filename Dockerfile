@@ -3,11 +3,12 @@ FROM node:20-alpine
 WORKDIR /usr/src/app
 
 COPY package.json .
+COPY yarn.lock .
 RUN yarn install
 
 COPY . .
 
-RUN echo "After yarn install:" && ls
+WORKDIR /usr/src/app
 
 RUN EXPORT=1 UNOPTIMIZED=1 yarn build
 
