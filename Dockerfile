@@ -2,8 +2,9 @@ FROM node:20-alpine
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
-COPY yarn.lock ./
+RUN npm install -g yarn@4.0.2
+COPY package.json .
+COPY yarn.lock .
 RUN yarn install
 
 COPY . .
@@ -11,7 +12,7 @@ COPY . .
 ENV EXPORT=1
 ENV UNOPTIMIZED=1
 
-RUN echo "$(ls)"
+RUN echo "After yarn install:" && ls
 
 RUN yarn build
 
