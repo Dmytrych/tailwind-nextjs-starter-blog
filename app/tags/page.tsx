@@ -3,6 +3,7 @@ import Tag from '@/components/Tag'
 import { slug } from 'github-slugger'
 import tagData from 'app/tag-data.json'
 import { genPageMetadata } from 'app/seo'
+import { hash } from 'thingies'
 
 export const metadata = genPageMetadata({ title: 'Tags', description: 'Things I blog about' })
 
@@ -25,7 +26,7 @@ export default async function Page() {
               <div key={t} className="mb-2 mr-5 mt-2">
                 <Tag text={t} />
                 <Link
-                  href={`/tags/${slug(t)}`}
+                  href={`/tags/${hash(slug(t))}`}
                   className="-ml-2 text-sm font-semibold text-gray-600 dark:text-gray-300"
                   aria-label={`Переглянути пости з тегами ${t}`}
                 >
