@@ -7,15 +7,12 @@ RUN yarn install
 
 COPY . .
 
-ENV EXPORT=1
-ENV UNOPTIMIZED=1
-
 RUN echo "After yarn install:" && ls
 
-RUN yarn build
-
-RUN yarn global add serve
+RUN EXPORT=1 UNOPTIMIZED=1 yarn build
 
 EXPOSE 3000
+
+RUN yarn global add serve
 
 CMD ["npx", "serve", "out"]
