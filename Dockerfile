@@ -14,6 +14,4 @@ RUN EXPORT=1 UNOPTIMIZED=1 npm run build
 
 EXPOSE 3000
 
-RUN yarn global add serve
-
 CMD ["npx", "serve", "out"]
